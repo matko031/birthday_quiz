@@ -19,7 +19,7 @@
      * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
      */
 
-    var quiztitle = "Some creative burgie title";
+    var quiztitle = "Birthday Quiz: burgie edition!";
 
     /**
     * Set the information about your questions here. The correct answer string needs to match
@@ -28,52 +28,52 @@
     */
     var quiz = [
         {
-            "question"      :   "Q1: Some question for Anna",
-            "image"         :   "image.png",
+            "question"      :   "Q1: Welke film is geregiseerd door Quentin Tarantino?",
+            "image"         :   "tarantino.jpg",
             "choices"       :   [
-                                    "Option 1",
-                                    "Option 2",
-                                    "Option 3",
-                                    "Option 4",
+                                    "Pirates of the Carribean: The Curse of D'Haeseleer",
+                                    "Pulp Friction",
+                                    "Harry Potter and the Prisoner of Arenberg",
+                                    "The Lord of The Rings: The Three Mechanics",
                                 ],
-            "correct"       :   "Correct",
-            "explanation"   :   "The digit is 7.",
+            "correct"       :   "Pulp Friction",
+            "explanation"   :   "",
         },
         {
-            "question"      :   "Q1: Some question for Astrid",
-            "image"         :   "image.png",
+            "question"      :   "Q2: Vul aan.",
+            "image"         :   "floating.jpg",
             "choices"       :   [
-                                    "Option 1",
-                                    "Option 2",
-                                    "Option 3",
-                                    "Option 4",
+                                    "Big ALU",
+                                    "Linker",
+                                    "Quantum register",
+                                    "Round Robin scheduler",
                                 ],
-            "correct"       :   "Correct",
-            "explanation"   :   "The digit is 4.",
+            "correct"       :   "Big ALU",
+            "explanation"   :   "",
         },
         {
-            "question"      :   "Q1: Some question for Laura",
-            "image"         :   "image.png",
+            "question"      :   "Q3: Wat is de bijnaam van de Belgische vrouwenvoetbalteam?",
+            "image"         :   "red_flames.jpg",
             "choices"       :   [
-                                    "Option 1",
-                                    "Option 2",
-                                    "Option 3",
-                                    "Option 4",
+                                "Black Precipitation",
+                                "Red Oxidation",
+                                "Yellow Entropy",
+                                "Purple Quantum Dots"
                                 ],
-            "correct"       :   "Correct",
-            "explanation"   :   "The digit is 8.",
+            "correct"       :   "Red Oxidation",
+            "explanation"   :   "",
         },
         {
-            "question"      :   "Q1: Some question for all three",
-            "image"         :   "image.png",
+            "question"      :   "Q4: Selecteer de juiste keuze.",
+            "image"         :   "arenberg.jpg",
             "choices"       :   [
-                                    "Option 1",
-                                    "Option 2",
-                                    "Option 3",
-                                    "Option 4",
+                                    "BWK-CW",
+                                    "CIT-WTK",
+                                    "WTK-ESAT",
+                                    "ESAT-CW",
                                 ],
-            "correct"       :   "Correct",
-            "explanation"   :   "The digit is 9.",
+            "correct"       :   "ESAT-CW",
+            "explanation"   :   "",
         }
 
     ];
@@ -185,7 +185,7 @@
             $('#question').empty();
             $('#choice-block').empty();
             $('#submitbutton').remove();
-            $('#question').text("You got " + score + " out of " + quiz.length + " correct. \n \n The digits you needed are 4 - 7 - 6 - 9.");
+            $('#question').text("You got " + score + " out of " + quiz.length + " correct. \n \n The digits you needed are 1 - 4 - 2 - 5.");
             $(document.createElement('h2')).css({'text-align':'center', 'font-size':'4em'}).text(Math.round(score/quiz.length * 100) + '%').insertAfter('#question');
         }
 
@@ -236,11 +236,11 @@
         body{line-height:1; font:normal 0.9em/1em "Helvetica Neue", Helvetica, Arial, sans-serif;} 
         ol,ul{list-style:none;}
         strong{font-weight:700;}
-        #frame{max-width:620px;width:auto;border:1px solid #ccc;background:#fff;padding:10px;margin-left:auto;margin-right:auto;margin-top:20px;} 
+        #frame{max-width:620px;width:auto;border:1px solid #ccc;background:#a3c7de;padding:10px;margin-left:auto;margin-right:auto;margin-top:20px;} 
         h1{font:normal bold 2em/1.8em "Helvetica Neue", Helvetica, Arial, sans-serif;text-align:left;border-bottom:1px solid #999;padding:0;width:auto}
         h2{font:italic bold 1.3em/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;padding:0;text-align:center;margin:20px 0;}
         p.pager{margin:5px 0 5px; font:bold 1em/1em "Helvetica Neue", Helvetica, Arial, sans-serif;color:#999;}
-        img.question-image{display:block;max-width:250px;margin:10px auto;border:1px solid #ccc;width:100%;height:auto;}
+        img.question-image{display:block;max-width:500px;margin:10px auto;border:1px solid #ccc;width:100%;height:auto;}
         #choice-block{display:block;list-style:none;margin:0;padding:0;}
         #submitbutton{background:#5a6b8c;}
         #submitbutton:hover{background:#7b8da6;}
