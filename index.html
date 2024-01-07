@@ -19,7 +19,7 @@
      * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
      */
 
-    var quiztitle = "Birthday Quiz: burgie edition!";
+    var quiztitle = "Joyeux Noël Claire!";
 
     /**
     * Set the information about your questions here. The correct answer string needs to match
@@ -28,27 +28,27 @@
     */
     var quiz = [
         {
-            "question"      :   "Q1: Welke film is geregiseerd door Quentin Tarantino?",
-            "image"         :   "tarantino.jpg",
+            "question"      :   "Ajoute les paroles: Je n'ai trouvé de repos \\\\ Que dans l'indifférence \\\\ Pourtant, je voudrais retrouver l'innocence",
+            "image"         :   "desenchantee.jpg",
             "choices"       :   [
-                                    "Pirates of the Carribean: The Curse of D'Haeseleer",
-                                    "Pulp Friction",
-                                    "Harry Potter and the Prisoner of Arenberg",
-                                    "The Lord of The Rings: The Three Mechanics",
+                                    "Tous mes idéaux : des mots",
+                                    "Mais rien n'a de sens, et rien ne va",
+                                    "Qui pourrait m'empêcher",
+                                    "Si la mort est un mystère",
                                 ],
-            "correct"       :   "Pulp Friction",
+            "correct"       :   "Mais rien n'a de sens, et rien ne va",
             "explanation"   :   "",
         },
         {
-            "question"      :   "Q2: Vul aan.",
-            "image"         :   "floating.jpg",
+            "question"      :   "Qui était écuyer de cuisine au château de Vaux-le-Vicomte?",
+            "image"         :   "vicomte.jpg",
             "choices"       :   [
-                                    "Big ALU",
-                                    "Linker",
-                                    "Quantum register",
-                                    "Round Robin scheduler",
+                                    "Jean-Baptiste Colbert",
+                                    "André Le Nôtre",
+                                    "Nicolas Fouquet",
+                                    "François Vatel",
                                 ],
-            "correct"       :   "Big ALU",
+            "correct"       :   "François Vatel",
             "explanation"   :   "",
         },
         {
@@ -64,15 +64,15 @@
             "explanation"   :   "",
         },
         {
-            "question"      :   "Q4: Selecteer de juiste keuze.",
-            "image"         :   "arenberg.jpg",
+            "question"      :   "Qui a la meilleure copine du monde",
+            "image"         :   "fin.jpeg",
             "choices"       :   [
-                                    "BWK-CW",
-                                    "CIT-WTK",
-                                    "WTK-ESAT",
-                                    "ESAT-CW",
+                                    "Olivier",
+                                    "Paul",
+                                    "Amar",
+                                    "Matko",
                                 ],
-            "correct"       :   "ESAT-CW",
+            "correct"       :   "Matko",
             "explanation"   :   "",
         }
 
@@ -146,7 +146,7 @@
                 if(currentquestion == quiz.length){
                     endQuiz();
                 } else {
-                    $(this).text('Check Answer').css({'color':'#222'}).off('click');
+                    $(this).text('Envoyer').css({'color':'#222'}).off('click');
                     nextQuestion();
                 }
             })
@@ -185,7 +185,7 @@
             $('#question').empty();
             $('#choice-block').empty();
             $('#submitbutton').remove();
-            $('#question').text("You got " + score + " out of " + quiz.length + " correct. \n \n The digits you needed are 1 - 4 - 2 - 5.");
+            $('#question').text("T'as " + score + " réponses correctes de " + quiz.length + "\n \n Les chiffres dont t'as besoin sont 1 - 2 - 2 - 3.");
             $(document.createElement('h2')).css({'text-align':'center', 'font-size':'4em'}).text(Math.round(score/quiz.length * 100) + '%').insertAfter('#question');
         }
 
@@ -219,7 +219,7 @@
                 addChoices(quiz[0]['choices']);
             
                 //add submit button
-                $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Check Answer').css({'font-weight':700,'color':'#222','padding':'30px 0'}).appendTo('#frame');
+                $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Envoyer').css({'font-weight':700,'color':'#222','padding':'30px 0'}).appendTo('#frame');
             
                 setupButtons();
             }
@@ -231,7 +231,7 @@
     <style type="text/css" media="all">
         /*css reset */
         html,body,div,span,h1,h2,h3,h4,h5,h6,p,code,small,strike,strong,sub,sup,b,u,i{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0;} 
-        body{background-image:url("background.jpg");}
+        body{background-image:url("background.jpg");background-size: cover;}
         article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;} 
         body{line-height:1; font:normal 0.9em/1em "Helvetica Neue", Helvetica, Arial, sans-serif;} 
         ol,ul{list-style:none;}
