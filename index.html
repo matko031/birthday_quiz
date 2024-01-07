@@ -52,20 +52,20 @@
             "explanation"   :   "",
         },
         {
-            "question"      :   "Q3: Wat is de bijnaam van de Belgische vrouwenvoetbalteam?",
-            "image"         :   "red_flames.jpg",
+            "question"      :   "Quel est le nom de la ville natale de Matko?",
+            "image"         :   "croatia.jpg",
             "choices"       :   [
-                                "Black Precipitation",
-                                "Red Oxidation",
-                                "Yellow Entropy",
-                                "Purple Quantum Dots"
+                                "Dubrovnik",
+                                "Zagreb",
+                                "Osijek",
+                                "Split"
                                 ],
-            "correct"       :   "Red Oxidation",
+            "correct"       :   "Osijek",
             "explanation"   :   "",
         },
         {
             "question"      :   "Qui a la meilleure copine du monde",
-            "image"         :   "fin.jpeg",
+            "image"         :   "fin.jpg",
             "choices"       :   [
                                     "Olivier",
                                     "Paul",
@@ -185,7 +185,7 @@
             $('#question').empty();
             $('#choice-block').empty();
             $('#submitbutton').remove();
-            $('#question').text("T'as " + score + " réponses correctes de " + quiz.length + "\n \n Les chiffres dont t'as besoin sont 1 - 2 - 2 - 3.");
+            $('#question').text("T'as " + score + " réponses correctes de " + quiz.length + ".\n \n Les chiffres dont t'as besoin sont 1 - 2 - 2 - 3.");
             $(document.createElement('h2')).css({'text-align':'center', 'font-size':'4em'}).text(Math.round(score/quiz.length * 100) + '%').insertAfter('#question');
         }
 
